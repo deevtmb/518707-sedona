@@ -7,50 +7,57 @@
 <body>
   <header>
     <nav class="site-navigation">
-      <a class="header-logo" href="index.html">
-        <img src="" width="" height="">
-      </a>
-      <ul>
+      <ul class="main-navigation">
         <li><a href="#">Информация</a></li>
         <li><a href="#">Фото и Видео</a></li>
         <li><a href="#">Карта Штата</a></li>
-        <li><a href="#" class="current-page">Гостиницы</a></li>
+        <li><a class="current-page">Гостиницы</a></li>
       </ul>
     </nav>
+    <a class="header-logo" href="index.html">
+      <img src="" width="" height="">
+    </a>
   </header>
 
-  <main class="container">
-    <h1 class="hidden">Поиск гостиницы в Седоне</h1>
+  <main>
+    <h1 class="visually-hidden">Поиск гостиницы в Седоне</h1>
     <section class="search-filter">
-      <h2 class="hidden">Варианты размещения</h2>
-      <!--Формы-->
-      <p>Инфраструктура</p>
-      <p>Тип жилья</p>
-      <p>Стоиость в сутки (Р):</p>
-      <button>Показать</button>
+      <h2 class="visually-hidden">Варианты размещения</h2>
+      <!--Разметить форму-->
+      <form>
+        <p>Инфраструктура</p>
+        <p>Тип жилья</p>
+        <p>Стоиость в сутки (Р):</p>
+        <button>Показать</button>
+      </form>
     </section>
 
     <section class="search-result">
-      <h2 class="hidden">Результат поиска</h2>
+      <h2 class="visually-hidden">Результат поиска</h2>
       <div class="search-sort">
-        <p>Найдено:</p>
+        <p>Найдено:<span>3</span></p>
         <p>Сортировка:</p>
         <ul>
           <li>По цене</li>
           <li>По типу</li>
           <li>По рейтингу</li>
-          <button></button>
-          <button></button>
+          <li><a href="#"></a></li>
+          <li><a href="#"></a></li>
         </ul>
       </div>
-      <ul>
+      <ul class="hotels-list">
         <li>
           <img class="hotel-image" src="" width="" height="">
           <div class="hotel-info">
             <h3>Amara Resort & Spa</h3>
-            <p><span>Гостиница</span><span>от 4000 Р.</span></p>
-            <a class="more-info-btn">Подробнее</a>
-            <a class="reservation">Забронировать</a>
+            <div class="more-info">
+              <p>Гостиница</p>>
+              <a class="more-info-btn">Подробнее</a>
+            </div>
+            <div class="reservation">
+              <p>от 4000 Р.</p>
+              <a class="reservation-btn">Забронировать</a>
+            </div>
           </div>
           <div class="hotel-rating">
             <p>Рейтинг: 8.5</p>
@@ -58,11 +65,14 @@
         </li>
         <li>
           <img class="hotel-image" src="" width="" height="">
-          <div class="hotel-info">
-            <h3>Desert Quail Inn</h3>
-            <p><span>Мотель</span><span>от 3000 Р.</span></p>
+          <h3>Desert Quail Inn</h3>
+          <div class="more-info">
+            <p>Мотель</p>>
             <a class="more-info-btn">Подробнее</a>
-            <a class="reservation">Забронировать</a>
+          </div>
+          <div class="reservation">
+            <p>от 3000 Р.</p>
+            <a class="reservation-btn">Забронировать</a>
           </div>
           <div class="hotel-rating">
             <p>Рейтинг: 8.9</p>
@@ -70,11 +80,14 @@
         </li>
         <li>
           <img class="hotel-image" src="" width="" height="">
-          <div class="hotel-info">
-            <h3>Villas at Poco Diablo</h3>
-            <p><span>Апартаменты</span><span>от 2000 Р.</span></p>
+          <h3>Villas at Poco Diablo</h3>
+          <div class="more-info">
+            <p>Апартаменты</p>>
             <a class="more-info-btn">Подробнее</a>
-            <a class="reservation">Забронировать</a>
+          </div>
+          <div class="reservation">
+            <p>от 2000 Р.</p>
+            <a class="reservation-btn">Забронировать</a>
           </div>
           <div class="hotel-rating">
             <p>Рейтинг: 9.2</p>
@@ -87,11 +100,11 @@
 
   <footer>
     <p>#VISITSEDONA</p>
-    <p>
-      <a class="social-btn social-btn-twitter" name="Twitter" href="#">1</a>
-      <a class="social-btn social-btn-facebook"></a>
-      <a class="social-btn social-btn-youtube"></a>
-    </p>
+    <ul>
+      <li><a class="social-btn social-btn-twitter"></a></li>
+      <li><a class="social-btn social-btn-facebook"></a></li>
+      <li><a class="social-btn social-btn-youtube"></a></li>
+    </ul>
     <p>WEBSITE BY <a href="https://htmlacademy.ru/intensive/htmlcss"></a></p>
   </footer>
 </body>
