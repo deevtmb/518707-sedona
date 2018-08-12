@@ -7,36 +7,39 @@
   <body>
     <header>
       <nav class="site-navigation">
-        <a class="header-logo">
-          <img src="" width="" height="">
-        </a>
-        <ul>
+        <ul class="main-navigation">
           <li><a href="#">Информация</a></li>
           <li><a href="#">Фото и Видео</a></li>
           <li><a href="#">Карта Штата</a></li>
-          <li><a href="hotels.html">Гостиницы</a></li>
+          <li><a class="current-page">Гостиницы</a></li>
         </ul>
       </nav>
+      <a class="header-logo" href="index.html">
+        <img src="" width="" height="" alt="">
+      </a>
     </header>
 
     <main class="container">
-      <h1 class="hidden">Путешествие в Седону</h1>
+      <h1 class="visually-hidden">Путешествие в Седону</h1>
       <section class="intro">
-
+        <img src="" width="" height="" alt="">
       </section>
 
       <section class="town-info">
-        <h2 class="hidden">Информация о Седоне</h2>
-        <p><b>Седона - небольшой городок в Аризоне, заслуживающий большего!</b></p>
-        <p>Расмотрим 5 причин, по которым Седона круче, чем Гранд Каньонн!</p>
+        <h2 class="visually-hidden">Информация о Седоне</h2>
+        <div class="about">
+          <p><b>Седона - небольшой городок в Аризоне, заслуживающий большего!</b></p>
+          <p>Расмотрим 5 причин, по которым Седона круче, чем Гранд Каньонн!</p>
+        </div>
         <ol class="reason-list">
           <li class="image-list-item">
             <div>
-              <h3>Настоящий городок</h3>
-              <p>- №1 -</p>
-              <p>Седона - не аттракцион для туристов, там течёт своя жизнь</p>
+              <div class="reason-type-1">
+                <h3>Настоящий городок</h3>
+                <p>- №1 -</p>
+                <p>Седона - не аттракцион для туристов, там течёт своя жизнь</p>
+              </div>
             </div>
-            <div class="image-space"></div>
             <ul class="town-features-list">
               <li>
                 <h4>Жильё</h4>
@@ -53,12 +56,11 @@
             </ul>
           </li>
           <li class="image-list-item">
-            <div>
+            <div class="reason-type-1">
               <h3>Там есть мост дьявола</h3>
               <p>- №2 -</p>
               <p>Да, по нему можно пройти! Если конечно Вы осмелитесь</p>
             </div>
-            <div class="image-space"></div>
           </li>
           <li>
             <h3>Небольшая площадь</h3>
@@ -79,45 +81,44 @@
       </section>
 
       <section class="search-form-title">
-        <h2 class="hidden">Поиск гостиницы</h2>
+        <h2 class="visually-hidden">Поиск гостиницы</h2>
         <p><b>Заинтересовались?</b></p>
         <p>Укажите предполагаемые даты поездки, и мы покажем Вам лучшие предложения гостиниц в Седоне</p>
-        <button>Поиск гостиницы в Седоне</button>
+        <a class="search-form-btn">Поиск гостиницы в Седоне</a>
+        <div class="search-form">
+          <p>
+            Дата заезда:
+            <!--Форма-->
+          </p>
+          <p>
+            Дата выезда:
+            <!--Форма-->
+          </p>
+          <p>
+            Взрослые:
+            <!--Форма-->
+          </p>
+          <p>
+            Дети:
+            <!--Форма-->
+          </p>
+          <button class="search-btn">Найти</button>
+        </div>
       </section>
 
-      <section class="search-form">
-        <p>
-          Дата заезда:
-          <!--Форма-->
-        </p>
-        <p>
-          Дата выезда:
-          <!--Форма-->
-        </p>
-        <p>
-          Взрослые:
-          <!--Форма-->
-        </p>
-        <p>
-          Дети:
-          <!--Форма-->
-        </p>
-        <a class="search-btn" href="#">Найти</a>
-      </section>
-
-      <section class="map-navigation">
-
+      <section class="map">
+        <img src="" width="" height="" alt="">
       </section>
 
     </main>
 
     <footer>
       <p>#VISITSEDONA</p>
-      <p>
-        <a class="social-btn social-btn-twitter" name="Twitter" href="#">1</a>
-        <a class="social-btn social-btn-facebook"></a>
-        <a class="social-btn social-btn-youtube"></a>
-      </p>
+      <ul>
+        <li><a class="social-btn social-btn-twitter"></a></li>
+        <li><a class="social-btn social-btn-facebook"></a></li>
+        <li><a class="social-btn social-btn-youtube"></a></li>
+      </ul>
       <p>WEBSITE BY <a href="https://htmlacademy.ru/intensive/htmlcss"></a></p>
     </footer>
   </body>
