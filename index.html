@@ -84,31 +84,29 @@
         <h2 class="visually-hidden">Поиск гостиницы</h2>
         <p><b>Заинтересовались?</b></p>
         <p>Укажите предполагаемые даты поездки, и мы покажем Вам лучшие предложения гостиниц в Седоне</p>
-        <a class="search-form-btn">Поиск гостиницы в Седоне</a>
-        <div class="search-form">
-          <form>
-            <p class="check-in-date">
+        <a class="search-form-btn" href="hotels-search.html">Поиск гостиницы в Седоне</a>
+        <div class="search-window">
+          <form class="search-form" method="post" action="https://echo.htmlacademy.ru">
+            <fieldset>
+              <legend class="visually-hidden">Даты поездки</legend>
               <label for="check-in-date">Дата заезда</label>
               <input type="text" name="check-in-date" id="check-in-date" value="24 апреля 2017">
               <a class="calendar" aria-label="Выберите дату в Календаре"></a>
-            </p>
-            <p class="check-out-date">
               <label for="check-out-date">Дата выезда:</label>
               <input type="text" name="check-out-date" id="check-out-date" value="4 июля 2017">
               <a class="calendar" aria-label="Выберите дату в Календаре"></a>
-            </p>
-            <p class="adults search-form-half">
+            </fieldset>
+            <fieldset>
+              <legend class="visually-hidden">Гости</legend>
               <label for="adults">Взрослые</label>
               <button class="minus-btn" type="button" aria-label="Убрать одного взрослого">-</button>
               <input type="number" name="adults" id="adults" min="1" step="1" value="2">
               <button class="plus-btn" type="button" aria-label="Добавить одного взрослого">+</button>
-            </p>
-            <p class="children search-form-half">
               <label for="children">Дети</label>
               <button class="minus-btn" type="button" aria-label="Убрать одного ребенка">-</button>
               <input type="number" name="children" id="children" step="1" value="0">
               <button class="plus-btn" type="button" aria-label="Добавить одного ребенка">+</button>
-            </p>
+            </fieldset>
             <button class="search-btn" type="submit">Найти</button>
           </form>
         </div>
@@ -123,8 +121,8 @@
     <footer>
       <p>#VISITSEDONA</p>
       <ul>
-        <li><a class="social-btn social-btn-twitter" aria-label="Почитайте о нас в Твиттере"></a></li>
-        <li><a class="social-btn social-btn-facebook" aria-label="Познакомьтесь с нам на Фейсбуке"></a></li>
+        <li><a class="social-btn social-btn-twitter" aria-label="Почитайте про нас в Твиттере"></a></li>
+        <li><a class="social-btn social-btn-facebook" aria-label="Познакомьтесь с нами на Фейсбуке"></a></li>
         <li><a class="social-btn social-btn-youtube" aria-label="Посмотрите про нас на Ютьюбе"></a></li>
       </ul>
       <p>WEBSITE BY<a href="https://htmlacademy.ru/intensive/htmlcss" aria-label="Сайт Разработчика"></a></p>
