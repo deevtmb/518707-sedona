@@ -23,7 +23,7 @@
       <h1 class="visually-hidden">Поиск гостиницы в Седоне</h1>
       <section class="search-filter">
         <h2 class="visually-hidden">Варианты размещения</h2>
-        <form>
+        <form class="search-form" method="post" action="https://echo.htmlacademy.ru">
           <fieldset>
             <legend>Инфраструктура</legend>
             <ul>
@@ -84,7 +84,13 @@
               До
               <output class="to" aria-label="Стоимость в сутки до">3000</output>
             </div>
-            <input class="visually-hidden" type="range" min="0" max="4000" step="100" value="3000" aria-label="Выберите цену из диапазона">
+            <div class="price-range">
+              <div class="scale">
+                <div class="bar"></div>
+              </div>
+              <div class="toggle min-toggle" tabindex="0" aria-label="Минимальная цена"></div>
+              <div class="toggle max-toggle" tabindex="0" aria-label="Максимальная цена"></div>
+            </div>
           </fieldset>
           <button class="show-result-btn" type="submit">Показать</button>
         </form>
@@ -159,8 +165,8 @@
     <footer>
       <p>#VISITSEDONA</p>
       <ul>
-        <li><a class="social-btn social-btn-twitter" aria-label="Почитайте о нас в Твиттере"></a></li>
-        <li><a class="social-btn social-btn-facebook" aria-label="Познакомьтесь с нам на Фейсбуке"></a></li>
+        <li><a class="social-btn social-btn-twitter" aria-label="Почитайте про нас в Твиттере"></a></li>
+        <li><a class="social-btn social-btn-facebook" aria-label="Познакомьтесь с нами на Фейсбуке"></a></li>
         <li><a class="social-btn social-btn-youtube" aria-label="Посмотрите про нас на Ютьюбе"></a></li>
       </ul>
       <p>WEBSITE BY<a href="https://htmlacademy.ru/intensive/htmlcss" aria-label="Сайт Разработчика"></a></p>
