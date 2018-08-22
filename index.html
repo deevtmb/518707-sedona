@@ -8,7 +8,7 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
-    <header>
+    <header class="header-navigation">
       <a class="header-logo">
         <img src="img/logo-sedona.svg" width="140" height="72" alt="">
       </a>
@@ -35,14 +35,13 @@
           <p>Расмотрим 5 причин, по которым Седона круче, чем Гранд Каньонн!</p>
         </div>
         <ol class="reason-list">
-          <li class="image-list-item">
-            <div>
-              <div class="reason-type-1">
-                <h3>Настоящий городок</h3>
-                <p>- №1 -</p>
-                <p>Седона - не аттракцион для туристов, там течёт своя жизнь</p>
-              </div>
+          <li class="reason-list-item">
+            <div class="reason-type-image">
+              <h3>Настоящий городок</h3>
+              <p>- №1 -</p>
+              <p>Седона - не аттракцион для туристов, там течёт своя жизнь</p>
             </div>
+            <div class="first-image-block"></div>
             <ul class="town-features-list">
               <li>
                 <h4>Жильё</h4>
@@ -58,24 +57,25 @@
               </li>
             </ul>
           </li>
-          <li class="image-list-item">
-            <div class="reason-type-1">
+          <li class="reason-list-item">
+            <div class="second-image-block"></div>
+            <div class="reason-type-image">
               <h3>Там есть мост дьявола</h3>
               <p>- №2 -</p>
               <p>Да, по нему можно пройти! Если конечно Вы осмелитесь</p>
             </div>
           </li>
-          <li>
+          <li class="reason-list-item">
             <h3>Небольшая площадь</h3>
             <p>- №3 -</p>
             <p>Все достопрримечательности находятся очень близко</p>
           </li>
-          <li>
+          <li class="reason-list-item">
             <h3>Красивая дорога</h3>
             <p>- №4 -</p>
             <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
           </li>
-          <li>
+          <li class="reason-list-item">
             <h3>Мало туристов</h3>
             <p>- №5 -</p>
             <p>Большинство едет в Гранд Каньон и толпится там</p>
@@ -102,13 +102,13 @@
             <fieldset>
               <legend class="visually-hidden">Гости</legend>
               <label for="adults">Взрослые</label>
-              <button class="minus-btn" type="button" aria-label="Убрать одного взрослого">-</button>
+              <button class="count-btn minus-btn" type="button" aria-label="Убрать одного взрослого"></button>
               <input type="number" name="adults" id="adults" min="1" step="1" value="2">
-              <button class="plus-btn" type="button" aria-label="Добавить одного взрослого">+</button>
+              <button class="count-btn plus-btn" type="button" aria-label="Добавить одного взрослого"></button>
               <label for="children">Дети</label>
-              <button class="minus-btn" type="button" aria-label="Убрать одного ребенка">-</button>
+              <button class="count-btn minus-btn" type="button" aria-label="Убрать одного ребенка"></button>
               <input type="number" name="children" id="children" step="1" value="0">
-              <button class="plus-btn" type="button" aria-label="Добавить одного ребенка">+</button>
+              <button class="count-btn plus-btn" type="button" aria-label="Добавить одного ребенка"></button>
             </fieldset>
             <button class="search-btn" type="submit">Найти</button>
           </form>
@@ -121,14 +121,14 @@
 
     </main>
 
-    <footer>
+    <footer class="site-footer">
       <p>#VISITSEDONA</p>
       <ul>
         <li><a class="social-btn social-btn-twitter" aria-label="Почитайте про нас в Твиттере"></a></li>
         <li><a class="social-btn social-btn-facebook" aria-label="Познакомьтесь с нами на Фейсбуке"></a></li>
         <li><a class="social-btn social-btn-youtube" aria-label="Посмотрите про нас на Ютьюбе"></a></li>
       </ul>
-      <p>WEBSITE BY<a href="https://htmlacademy.ru/intensive/htmlcss" aria-label="Сайт Разработчика"></a></p>
+      <p>WEBSITE BY<a class="site-developer" href="https://htmlacademy.ru/intensive/htmlcss" aria-label="Сайт Разработчика"></a></p>
     </footer>
   </body>
 </html>
