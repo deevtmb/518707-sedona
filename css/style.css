@@ -15,6 +15,14 @@ a {
   text-decoration: none;
 }
 
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
 .header-navigation {
   line-height: 26px;
   font-weight: bold;
@@ -26,27 +34,32 @@ a {
   list-style: none;
 }
 
-.main-navigation a {
+.main-navigation a:not(.current-page) {
    color: #000000;
 }
 
-.main-navigation a:hover,
-.main-navigation a:focus {
+.main-navigation a:hover:not(.current-page),
+.main-navigation a:focus:not(.current-page) {
   color: #81b3d2;
 }
 
-.main-navigation a:active {
+.main-navigation a:active:not(.current-page) {
   color: #cacaca;
 }
 
-a.current-page {
+.current-page {
   color: #766357;
 }
 
 .intro {
+  width: 100%;
+  min-width: 768px;
+  background-color: #d8e6f1;
   background-image: url("../img/mask-intro.svg"), url("../img/bg-photo.jpg");
   background-repeat: no-repeat, no-repeat;
   background-position: 50% 100%, 50% 50%;
+  background-size: auto, 100%;
+  text-align: center;
 }
 
 .about {
@@ -83,18 +96,24 @@ a.current-page {
   background-color: #ffffff;
 }
 
-.reason-list-item .reason-type-image {
+.reason-type-image {
   color: #ffffff;
 
   background-color: #81b3d2;
 }
 
+.reason-type-image h3 {
+  color: #ffffff;
+}
+
 .first-image-block {
   background-image: url("../img/bg-town.jpg");
+  background-color: #81b3d2;
 }
 
 .second-image-block {
   background-image: url("../img/bg-bridge.jpg");
+  background-color: #81b3d2;
 }
 
 .search-form-title {
@@ -112,7 +131,7 @@ a.current-page {
   color: #000000;
 }
 
-a.search-form-btn {
+.search-form-btn {
   font-size: 21px;
   font-weight: bold;
   line-height: 26px;
@@ -121,12 +140,12 @@ a.search-form-btn {
   background-color: #766357;
 }
 
-a.search-form-btn:hover,
-a.search-form-btn:focus {
+.search-form-btn:hover,
+.search-form-btn:focus {
   background-color: #604e43;
 }
 
-a.search-form-btn:active {
+.search-form-btn:active {
   color: rgba(255, 255, 255, 0.3);
   background-color: #503e33;
 }
@@ -137,8 +156,7 @@ a.search-form-btn:active {
 }
 
 .search-form input,
-.search-form .minus-btn,
-.search-form .plus-btn {
+.count-btn {
   font-weight: bold;
   background-color: #f2f2f2;
   border: none;
@@ -160,7 +178,7 @@ a.search-form-btn:active {
 .calendar:hover,
 .calendar:focus,
 .count-btn:hover,
-.cont-btn:focus {
+.count-btn:focus {
   fill: #000000;
 }
 
@@ -229,6 +247,7 @@ a.search-form-btn:active {
 
 /*Стили для Hotels.html*/
 .search-filter {
+  background-color: #81b3d3;
   background-image: url("../img/bg-hotel-page.jpg");
   background-repeat: no-repeat;
   background-position: 50% 50%;
@@ -291,38 +310,38 @@ a.search-form-btn:active {
   list-style: none;
 }
 
-a.sort-type {
+.sort-type {
   color: rgba(0, 0, 0, 0.3);
   border-bottom: 1px dashed #81b3d2;
 }
 
-a.current-sort-type {
+.current-sort-type {
   color: #81b3d2;
   border: none;
 }
 
-a.sort-type:hover,
-a.sort-type:focus {
+.sort-type:hover,
+.sort-type:focus {
   color: #81b3d2;
   border-bottom: 1px dashed #81b3d2;
 }
 
-a.sort-type:active {
+.sort-type:active {
   color: #000000;
   border: none;
 }
 
-a.sort-from {
+.sort-from {
   fill: rgba(0, 0, 0, 0.3);
 }
 
-a.sort-from:hover,
-a.sort-from:focus {
+.sort-from:hover,
+.sort-from:focus {
   fill: #231f20;
 }
 
-a.sort-from:active,
-a.current-sort-from {
+.sort-from:active,
+.current-sort-from {
   fill: #81b3d2;
 }
 
@@ -341,34 +360,34 @@ a.current-sort-from {
   color: rgba(0, 0, 0, 0.3);
 }
 
-a.more-info-btn {
+.more-info-btn {
   font-weight: bold;
   color: #ffffff;
   background-color: #81b3d2;
 }
 
-a.more-info-btn:hover,
-a.more-info-btn:focus {
+.more-info-btn:hover,
+.more-info-btn:focus {
   background-color: #669ec0;
 }
 
-a.more-info-btn:active {
+.more-info-btn:active {
   color: rgba(255, 255, 255, 0.3);
   background-color: #5496bd;
 }
 
-a.reservation-btn {
+.reservation-btn {
   font-weight: bold;
   color: #ffffff;
   background-color: #766357;
 }
 
-a.reservation-btn:hover,
-a.reservation-btn:focus {
+.reservation-btn:hover,
+.reservation-btn:focus {
   background-color: #604e43;
 }
 
-a.reservation-btn:active {
+.reservation-btn:active {
   color: rgba(255, 255, 255, 0.3);
   background-color: #503e33;
 }
