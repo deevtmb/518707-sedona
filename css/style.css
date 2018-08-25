@@ -1,14 +1,19 @@
-body {
-  margin: 0;
-  padding: 0 40px;
+html {
+  background-color: #f2f2f2;
+}
 
+body {
+  min-width: 768px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0;
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 14px;
   line-height: 21px;
   text-transform: uppercase;
   color: #333333;
-
   background-color: #f2f2f2;
+  box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);
 }
 
 a {
@@ -24,15 +29,50 @@ a {
 }
 
 .header-navigation {
+  min-height: 56px;
+  padding: 0;
+
   line-height: 26px;
   font-weight: bold;
+  text-align: center;
 
   background-color: #ffffff;
 }
 
-.main-navigation {
-  list-style: none;
+.header-navigation img {
+  position: absolute;
+  top: 0;
+  left: 0;
+
 }
+
+.main-navigation {
+  padding: 0 6%;
+  margin: 0;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  list-style: none;
+
+}
+
+.main-navigation li{
+  width: 20%;
+  min-height: 56px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.main-navigation li:nth-child(3) {
+  margin-left: auto;
+}
+
+.main-navigation li:nth-child(3),
+.main-navigation li:last-child {
+  justify-content: flex-end;
+}
+
 
 .main-navigation a:not(.current-page) {
    color: #000000;
@@ -52,20 +92,38 @@ a {
 }
 
 .intro {
-  width: 100%;
-  min-width: 768px;
+  min-height: 508px;
+  max-height: 512px;
+  padding-top: 76px;
+  margin: 0;
   background-color: #d8e6f1;
   background-image: url("../img/mask-intro.svg"), url("../img/bg-photo.jpg");
   background-repeat: no-repeat, no-repeat;
-  background-position: 50% 100%, 50% 50%;
-  background-size: auto, 100%;
+  background-position: 50% 100%, 50% 30%;
+  background-size: 100%, 100% 800px;
   text-align: center;
 }
 
+.container {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 .about {
+  width: 100%;
+  padding-top: 60px;
+  padding-bottom: 55px;
+  margin: 0;
   line-height: 26px;
 
   background-color: #ffffff;
+}
+
+.about p {
+  width: 575px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .about b {
@@ -75,12 +133,16 @@ a {
   color: #000000;
 }
 
-.reason-list,
-.town-features-list {
+.reason-list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #eeeeee;
   list-style: none;
 }
 
-.reason-list-item h3,
+.reason-list h3,
 .town-features-list h4 {
   font-size: 21px;
   font-weight: bold;
@@ -88,40 +150,91 @@ a {
   color: #000000;
 }
 
-.reason-list {
-  background-color: #eeeeee;
+.reason-main {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.reason-block {
+  width: calc(100% / 3);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  background-color: #81b3d2;
+
+  text-align: center;
+}
+
+.reason-block h3 {
+  color: #ffffff;
+}
+
+.image-block {
+  margin: 0;
+  padding: 0;
+  width: calc((100% / 3) * 2);
+  min-height: 256px;
+  background-color: #81b3d2;
+  background-size: 100% 401px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+.image-block-1 {
+  background-image: url("../img/bg-town.jpg");
+}
+
+.image-block-2 {
+  background-image: url("../img/bg-bridge.jpg");
 }
 
 .town-features-list {
+  margin: 0;
+  padding: 0;
+  min-height: 330px;
+  width: 100%;
+  display: flex;
+  align-items: center;
   background-color: #ffffff;
+  list-style: none;
 }
 
-.reason-type-image {
-  color: #ffffff;
+.town-features-list li {
+  width: calc(100% / 3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
-  background-color: #81b3d2;
+  text-align: center;
 }
 
-.reason-type-image h3 {
-  color: #ffffff;
-}
+.reason-simple {
+  margin: 0;
+  min-height: 256px;
+  display: flex;
+  width: calc(100% / 3);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
-.first-image-block {
-  background-image: url("../img/bg-town.jpg");
-  background-color: #81b3d2;
-}
-
-.second-image-block {
-  background-image: url("../img/bg-bridge.jpg");
-  background-color: #81b3d2;
+  text-align: center;
 }
 
 .search-form-title {
-  background-color: #ffffff;
-}
+  margin: 0;
+  padding: 0;
+  min-height: 291px;
 
-.search-form-title {
-    line-height: 26px;
+  line-height: 26px;
+  background-color: #ffffff;
 }
 
 .search-form-title b {
@@ -131,10 +244,23 @@ a {
   color: #000000;
 }
 
+.search-form-title p {
+  width: 37%;
+  margin: auto;
+  text-align: center;
+}
+
 .search-form-btn {
+  width: 568px;
+  height: 86px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   font-size: 21px;
   font-weight: bold;
   line-height: 26px;
+
   color: #ffffff;
 
   background-color: #766357;
@@ -151,8 +277,16 @@ a {
 }
 
 .search-form {
+  width: 568px;
+  padding: 55px;
+  box-sizing: border-box;
   font-weight: bold;
   color: #000000;
+}
+
+.search-form fieldset {
+  display: flex;
+  border: none;
 }
 
 .search-form input,
@@ -170,6 +304,7 @@ a {
   background-color: #ffffff;
   border: 2px solid #e5e5e5;
 }
+
 .calendar,
 .count-btn {
   fill: #a9a9a9;
@@ -188,7 +323,16 @@ a {
 }
 
 .search-btn {
+  margin-top: 54px;
+  width: 458px;
+  height: 58px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   font-size: 21px;
+  font-weight: bold;
+  text-transform: uppercase;
   color: #ffffff;
   background-color: #81b3d2;
   border: none;
@@ -204,9 +348,34 @@ a {
   background-color: #5496bd;
 }
 
-.site-footer {
-  line-height: 26px;
+.map {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 593px;
+
   background-color: #ffffff;
+  background-image: url(../img/map.jpg);
+  background-position: 50% 100%;
+  background-repeat: no-repeat;
+  background-size: auto;
+
+}
+
+.site-footer {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 120px;
+  display: flex;
+  align-items: center;
+
+  line-height: 26px;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.site-footer p{
+  width: calc(100% /3);
 }
 
 .site-footer p:first-child {
@@ -215,6 +384,7 @@ a {
 }
 
 .site-footer ul {
+  width: calc(100% /3);
   list-style: none;
 }
 
@@ -246,18 +416,27 @@ a {
 }
 
 /*Стили для Hotels.html*/
+
 .search-filter {
+  margin: 0;
+  padding: 30px 6%;
+  min-height: 157px;
+
   background-color: #81b3d3;
   background-image: url("../img/bg-hotel-page.jpg");
   background-repeat: no-repeat;
   background-position: 50% 50%;
+  background-size: 100%;
 }
 
 .filter-form {
+  display: flex;
   color: #ffffff;
 }
 
 .filter-form fieldset {
+  padding: 0;
+  margin: 0;
   border: none;
 }
 
@@ -266,7 +445,7 @@ a {
 }
 
 .filter-form ul {
-  list-style: none;
+    list-style: none;
 }
 
 .filter-form input[type="checkbox"] {
@@ -299,7 +478,22 @@ a {
   border: 2px solid #ffffff;
 }
 
+.search-result {
+  margin: 0;
+  background-color: #ffffff;
+}
+
+.search-sort {
+  margin: 0;
+  padding: 0 6%;
+  height: 86px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #e5e5e5;
+}
+
 .search-sort p:first-child {
+  margin-right: 50px;
   font-size: 21px;
   font-weight: bold;
   line-height: 26px;
@@ -307,10 +501,12 @@ a {
 }
 
 .search-sort ul {
+  display: flex;
   list-style: none;
 }
 
 .sort-type {
+  margin-right: 30px;
   color: rgba(0, 0, 0, 0.3);
   border-bottom: 1px dashed #81b3d2;
 }
@@ -320,13 +516,13 @@ a {
   border: none;
 }
 
-.sort-type:hover,
-.sort-type:focus {
+.sort-type:hover:not(.current-sort-type),
+.sort-type:focus:not(.current-sort-type) {
   color: #81b3d2;
   border-bottom: 1px dashed #81b3d2;
 }
 
-.sort-type:active {
+.sort-type:active:not(.current-sort-type) {
   color: #000000;
   border: none;
 }
@@ -345,7 +541,29 @@ a {
   fill: #81b3d2;
 }
 
+.hotels-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.hotels-list-item {
+  padding: 30px 6%;
+  display: flex;
+  height: 90px;
+
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.hotel-info {
+  margin: 0 30px;
+  width: 240px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .hotels-list-item h3 {
+  margin: 0;
   font-size: 21px;
   font-weight: bold;
   line-height: 26px;
@@ -361,6 +579,8 @@ a {
 }
 
 .more-info-btn {
+  width: 110px;
+  heght: 27px;
   font-weight: bold;
   color: #ffffff;
   background-color: #81b3d2;
@@ -377,6 +597,8 @@ a {
 }
 
 .reservation-btn {
+  width: 142px;
+  height: 27px;
   font-weight: bold;
   color: #ffffff;
   background-color: #766357;
@@ -391,3 +613,4 @@ a {
   color: rgba(255, 255, 255, 0.3);
   background-color: #503e33;
 }
+

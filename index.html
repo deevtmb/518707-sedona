@@ -35,13 +35,13 @@
           <p>Расмотрим 5 причин, по которым Седона круче, чем Гранд Каньонн!</p>
         </div>
         <ol class="reason-list">
-          <li class="reason-list-item">
-            <div class="reason-type-image">
+          <li class="reason-main">
+            <div class="reason-block">
               <h3>Настоящий городок</h3>
               <p>- №1 -</p>
               <p>Седона - не аттракцион для туристов, там течёт своя жизнь</p>
             </div>
-            <div class="first-image-block"></div>
+            <div class="image-block image-block-1"></div>
             <ul class="town-features-list">
               <li>
                 <h4>Жильё</h4>
@@ -57,25 +57,25 @@
               </li>
             </ul>
           </li>
-          <li class="reason-list-item">
-            <div class="second-image-block"></div>
-            <div class="reason-type-image">
+          <li class="reason-main">
+            <div class="image-block image-block-2"></div>
+            <div class="reason-block">
               <h3>Там есть мост дьявола</h3>
               <p>- №2 -</p>
               <p>Да, по нему можно пройти! Если конечно Вы осмелитесь</p>
             </div>
           </li>
-          <li class="reason-list-item">
+          <li class="reason-simple">
             <h3>Небольшая площадь</h3>
             <p>- №3 -</p>
-            <p>Все достопрримечательности находятся очень близко</p>
+            <p>Все достопримечательности находятся очень близко</p>
           </li>
-          <li class="reason-list-item">
+          <li class="reason-simple">
             <h3>Красивая дорога</h3>
             <p>- №4 -</p>
             <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
           </li>
-          <li class="reason-list-item">
+          <li class="reason-simple">
             <h3>Мало туристов</h3>
             <p>- №5 -</p>
             <p>Большинство едет в Гранд Каньон и толпится там</p>
@@ -92,7 +92,7 @@
           <form class="search-form" method="post" action="https://echo.htmlacademy.ru">
             <fieldset>
               <legend class="visually-hidden">Даты поездки</legend>
-              <label for="check-in-date">Дата заезда</label>
+              <label for="check-in-date">Дата заезда:</label>
               <input type="text" name="check-in-date" id="check-in-date" value="24 апреля 2017">
               <a class="calendar" aria-label="Выберите дату в Календаре"></a>
               <label for="check-out-date">Дата выезда:</label>
@@ -101,11 +101,11 @@
             </fieldset>
             <fieldset>
               <legend class="visually-hidden">Гости</legend>
-              <label for="adults">Взрослые</label>
+              <label for="adults">Взрослые:</label>
               <button class="count-btn minus-btn" type="button" aria-label="Убрать одного взрослого"></button>
               <input type="number" name="adults" id="adults" min="1" step="1" value="2">
               <button class="count-btn plus-btn" type="button" aria-label="Добавить одного взрослого"></button>
-              <label for="children">Дети</label>
+              <label for="children">Дети:</label>
               <button class="count-btn minus-btn" type="button" aria-label="Убрать одного ребенка"></button>
               <input type="number" name="children" id="children" step="1" value="0">
               <button class="count-btn plus-btn" type="button" aria-label="Добавить одного ребенка"></button>
@@ -116,9 +116,8 @@
       </section>
 
       <section class="map">
-        <img src="img/map.jpg" width="1200" height="593" alt="Седона на карте">
+        <!--<img src="img/map.jpg" width="100%" height="100%" alt="Седона на карте">-->
       </section>
-
     </main>
 
     <footer class="site-footer">
