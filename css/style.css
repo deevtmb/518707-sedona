@@ -138,7 +138,7 @@ a {
 
 .reason {
   width: calc(100% / 3);
-  padding: 50px 4% 10px;
+  padding: 40px 4% 0;
   text-align: center;
   box-sizing: border-box;
 }
@@ -170,7 +170,8 @@ a {
   text-align: center;
 }
 
-.image-block-1::after {
+.image-1::after {
+  content: "";
   display: block;
   margin: 0;
   width: calc((100% / 3) * 2);
@@ -181,7 +182,8 @@ a {
 
 }
 
-.image-block-2::before {
+.image-2::before {
+  content: "";
   display: block;
   margin: 0;
   width: calc((100% / 3) * 2);
