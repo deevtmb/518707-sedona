@@ -1,3 +1,7 @@
+/*body * {*/
+  /*outline: 1px dashed red;*/
+/*}*/
+
 html {
   background-color: #f2f2f2;
 }
@@ -31,19 +35,15 @@ a {
 .header-navigation {
   min-height: 56px;
   padding: 0;
-
   line-height: 26px;
   font-weight: bold;
   text-align: center;
-
   background-color: #ffffff;
 }
 
-.header-navigation img {
+.header-logo {
   position: absolute;
-  top: 0;
   left: 0;
-
 }
 
 .main-navigation {
@@ -53,7 +53,6 @@ a {
   box-sizing: border-box;
   display: flex;
   list-style: none;
-
 }
 
 .main-navigation li{
@@ -104,12 +103,6 @@ a {
   text-align: center;
 }
 
-.container {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
-
 .about {
   width: 100%;
   padding-top: 60px;
@@ -138,106 +131,94 @@ a {
   padding: 0;
   display: flex;
   flex-wrap: wrap;
+  width: 100%;
   background-color: #eeeeee;
   list-style: none;
 }
 
-.reason-list h3,
+.reason {
+  width: calc(100% / 3);
+  padding: 50px 4% 10px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.reason p {
+  margin-bottom: 30px;
+  vertical-align: center;
+}
+
+.reason h3,
 .town-features-list h4 {
+  width: 160px;
+  margin: 0 auto 30px;
+
   font-size: 21px;
   font-weight: bold;
-
+  text-align: center;
   color: #000000;
 }
 
-.reason-main {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  width: 100%;
-  flex-wrap: wrap;
-}
-
 .reason-block {
-  width: calc(100% / 3);
+  width: 100%;
   margin: 0;
   padding: 0;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   color: #ffffff;
   background-color: #81b3d2;
 
   text-align: center;
+}
+
+.image-block-1::after {
+  display: block;
+  margin: 0;
+  width: calc((100% / 3) * 2);
+  background-image: url("../img/bg-town.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+
+}
+
+.image-block-2::before {
+  display: block;
+  margin: 0;
+  width: calc((100% / 3) * 2);
+  background-image: url("../img/bg-bridge.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
 }
 
 .reason-block h3 {
   color: #ffffff;
 }
 
-.image-block {
-  margin: 0;
-  padding: 0;
-  width: calc((100% / 3) * 2);
-  min-height: 256px;
-  background-color: #81b3d2;
-  background-size: 100% 401px;
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-}
-
-.image-block-1 {
-  background-image: url("../img/bg-town.jpg");
-}
-
-.image-block-2 {
-  background-image: url("../img/bg-bridge.jpg");
-}
-
 .town-features-list {
   margin: 0;
   padding: 0;
-  min-height: 330px;
   width: 100%;
   display: flex;
-  align-items: center;
   background-color: #ffffff;
   list-style: none;
 }
 
 .town-features-list li {
   width: calc(100% / 3);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-  text-align: center;
-}
-
-.reason-simple {
-  margin: 0;
-  min-height: 256px;
-  display: flex;
-  width: calc(100% / 3);
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
   text-align: center;
 }
 
 .search-form-title {
+  position: relative;
   margin: 0;
-  padding: 0;
-  min-height: 291px;
-
+  padding-top: 55px;
   line-height: 26px;
   background-color: #ffffff;
 }
 
 .search-form-title b {
+
   font-size: 30px;
   font-weight: bold;
   line-height: 36px;
@@ -245,21 +226,20 @@ a {
 }
 
 .search-form-title p {
-  width: 37%;
-  margin: auto;
+  width: 100%;
+  margin: 0;
+  padding-bottom: 35px;
   text-align: center;
 }
 
 .search-form-btn {
   width: 568px;
-  height: 86px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  font-size: 21px;
+  margin: 0 auto;
+  padding: 33px 0;
+  display: block;
+  text-align: center;
   font-weight: bold;
-  line-height: 26px;
+  font-size: 21px;
 
   color: #ffffff;
 
@@ -277,6 +257,9 @@ a {
 }
 
 .search-form {
+  display: block;
+  background-color: #ffffff;
+  position: absolute;
   width: 568px;
   padding: 55px;
   box-sizing: border-box;
@@ -285,6 +268,8 @@ a {
 }
 
 .search-form fieldset {
+  padding: 0;
+  margin: 0;
   display: flex;
   border: none;
 }
@@ -359,7 +344,6 @@ a {
   background-position: 50% 100%;
   background-repeat: no-repeat;
   background-size: auto;
-
 }
 
 .site-footer {
@@ -454,6 +438,10 @@ a {
 
 .checkbox-indicator:disabled {
   fill: #6a6a6a;
+}
+
+.show-result {
+  margin-left: auto;
 }
 
 /*.toggle{*/
@@ -560,10 +548,16 @@ a {
   width: 240px;
   display: flex;
   flex-wrap: wrap;
+  flex-grow: 1;
+}
+
+.hotel-info p {
+  margin: 0;
 }
 
 .hotels-list-item h3 {
   margin: 0;
+  width: 100%;
   font-size: 21px;
   font-weight: bold;
   line-height: 26px;
@@ -579,9 +573,12 @@ a {
 }
 
 .more-info-btn {
+  display: block;
+  margin: 0;
+  padding: 5px 0;
   width: 110px;
-  heght: 27px;
   font-weight: bold;
+  text-align: center;
   color: #ffffff;
   background-color: #81b3d2;
 }
@@ -597,9 +594,12 @@ a {
 }
 
 .reservation-btn {
+  display: block;
+  margin: 0;
+  padding: 5px 0;
   width: 142px;
-  height: 27px;
   font-weight: bold;
+  text-align: center;
   color: #ffffff;
   background-color: #766357;
 }
