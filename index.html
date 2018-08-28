@@ -37,29 +37,29 @@
         <ol class="reason-list">
           <li>
             <div class="reason-block image-1">
-              <div class="reason ">
+              <div class="reason">
                 <h3>Настоящий городок</h3>
                 <p>- №1 -</p>
                 <p>Седона - не аттракцион для туристов, там течёт своя жизнь</p>
               </div>
             </div>
             <ul class="town-features-list">
-              <li class="reason">
+              <li class="reason features-icon accommodation">
                 <h4>Жильё</h4>
                 <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
               </li>
-              <li class="reason">
+              <li class="reason features-icon food">
                 <h4>Еда</h4>
                 <p>Всегда заказывайте фирменный бургер, Вы не разочаруетесь</p>
               </li>
-              <li class="reason">
+              <li class="reason features-icon souvenir">
                 <h4>Сувениры</h4>
                 <p>Не только Китайского, но и местного производства!</p>
               </li>
             </ul>
           </li>
           <li class="reason-block image-2">
-            <div class="reason ">
+            <div class="reason">
               <h3>Там есть мост дьявола</h3>
               <p>- №2 -</p>
               <p>Да, по нему можно пройти! Если конечно Вы осмелитесь</p>
@@ -91,25 +91,35 @@
         <a class="search-form-btn" href="hotels-search.html">Поиск гостиницы в Седоне</a>
         <div class="search-window">
           <form class="search-form" method="post" action="https://echo.htmlacademy.ru">
-            <fieldset>
+            <fieldset class="form-date-group">
               <legend class="visually-hidden">Даты поездки</legend>
-              <label for="check-in-date">Дата заезда:</label>
-              <input type="text" name="check-in-date" id="check-in-date" value="24 апреля 2017">
-              <a class="calendar" aria-label="Выберите дату в Календаре"></a>
-              <label for="check-out-date">Дата выезда:</label>
-              <input type="text" name="check-out-date" id="check-out-date" value="4 июля 2017">
-              <a class="calendar" aria-label="Выберите дату в Календаре"></a>
+              <div>
+                <label for="check-in-date">Дата заезда:</label>
+                <input type="text" name="check-in-date" id="check-in-date" value="24 апреля 2017">
+                <a class="calendar" aria-label="Выберите дату в Календаре"></a>
+              </div>
+              <div>
+                <label for="check-out-date">Дата выезда:</label>
+                <input type="text" name="check-out-date" id="check-out-date" value="4 июля 2017">
+                <a class="calendar" aria-label="Выберите дату в Календаре"></a>
+              </div>
             </fieldset>
-            <fieldset>
+            <fieldset class="form-count-group">
               <legend class="visually-hidden">Гости</legend>
-              <label for="adults">Взрослые:</label>
-              <button class="count-btn minus-btn" type="button" aria-label="Убрать одного взрослого"></button>
-              <input type="number" name="adults" id="adults" min="1" step="1" value="2">
-              <button class="count-btn plus-btn" type="button" aria-label="Добавить одного взрослого"></button>
-              <label for="children">Дети:</label>
-              <button class="count-btn minus-btn" type="button" aria-label="Убрать одного ребенка"></button>
-              <input type="number" name="children" id="children" step="1" value="0">
-              <button class="count-btn plus-btn" type="button" aria-label="Добавить одного ребенка"></button>
+              <div>
+                <label for="adults">Взрослые:</label>
+                <div>
+                  <button class="count-btn minus-btn" type="button" aria-label="Убрать одного взрослого"></button>
+                  <input type="number" name="adults" id="adults" min="1" step="1" value="2">
+                  <button class="count-btn plus-btn" type="button" aria-label="Добавить одного взрослого"></button>
+                </div>
+                <label for="children">Дети:</label>
+                <div>
+                  <button class="count-btn minus-btn" type="button" aria-label="Убрать одного ребенка"></button>
+                  <input type="number" name="children" id="children" step="1" value="0">
+                  <button class="count-btn plus-btn" type="button" aria-label="Добавить одного ребенка"></button>
+                </div>
+              </div>
             </fieldset>
             <button class="search-btn" type="submit">Найти</button>
           </form>
@@ -117,18 +127,27 @@
       </section>
 
       <section class="map">
-        <!--<img src="img/map.jpg" width="100%" height="100%" alt="Седона на карте">-->
+        <h2 class="visually-hidden">Седона на карте</h2>
       </section>
     </main>
 
-    <footer class="site-footer">
+    <footer class="site-footer index-page-footer">
       <p>#VISITSEDONA</p>
       <ul>
-        <li><a class="social-btn social-btn-twitter" aria-label="Почитайте про нас в Твиттере"></a></li>
-        <li><a class="social-btn social-btn-facebook" aria-label="Познакомьтесь с нами на Фейсбуке"></a></li>
-        <li><a class="social-btn social-btn-youtube" aria-label="Посмотрите про нас на Ютьюбе"></a></li>
+        <li>
+          <a class="social-btn social-btn-twitter" aria-label="Почитайте про нас в Твиттере"><span class="visually-hidden">Twitter</span></a>
+        </li>
+        <li>
+          <a class="social-btn social-btn-facebook" aria-label="Познакомьтесь с нами на Фейсбуке"><span class="visually-hidden">Facebook</span></a>
+        </li>
+        <li>
+          <a class="social-btn social-btn-youtube" aria-label="Посмотрите про нас на Ютьюбе"><span class="visually-hidden">Youtube</span></a>
+        </li>
       </ul>
-      <p>WEBSITE BY<a class="site-developer" href="https://htmlacademy.ru/intensive/htmlcss" aria-label="Сайт Разработчика"></a></p>
+      <p class="site-developer">
+        <span>WEBSITE BY</span>
+        <a href="https://htmlacademy.ru/intensive/htmlcss" aria-label="Сайт Разработчика"><span class="visually-hidden">HTML Academy</span></a>
+      </p>
     </footer>
   </body>
 </html>
