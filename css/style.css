@@ -1,7 +1,3 @@
-/*body * {*/
-  /*outline: 1px dashed red;*/
-/*}*/
-
 html {
   background-color: #f2f2f2;
 }
@@ -60,7 +56,7 @@ a {
 }
 
 .main-navigation li{
-  width: calc((240 / 1056) * 100%);
+  width: calc((240 / 1056) * 100%); /*Вопрос: можно ли проще расчитать ширину? Ширина = 20% ширины макета*/
   padding: 15px 0;
   text-align: left;
 }
@@ -95,7 +91,7 @@ a {
   padding: 76px 0 72px;
   margin: 0;
   background-color: #d8e6f1;
-  background-image: url("../img/mask-intro.svg"), url("../img/bg-photo.jpg");
+  background-image: url("../img/mask-intro.svg"), url("../img/bg-photo.jpg"); /*Вопрос: при уменьшении размера макета до 768px внизу появляются края фона, картинка не помещается, можно исправить?*/
   background-repeat: no-repeat, no-repeat;
   background-position: 50% 100%, 50% 20%;
   background-size: 100%, 100%;
@@ -136,7 +132,7 @@ a {
 }
 
 .reason {
-  min-height: 256px;
+  min-height: 256px; /*Вопрос: размер нижнего отступа в блоке меняется в зависимости от размера макета. Я убрал нижний отступ, но добавил min-height, так можно? или можно сделать подругому? если его не ставить фон появляется за изображением*/
   width: calc(100% / 3);
   padding: 45px 4% 0;
   text-align: center;
@@ -224,7 +220,7 @@ a {
 
 .souvenir::before {
   content: url("../img/icon-souvenir.svg");
-  margin-top: -3px;
+  margin-top: -3px;  /*Вопрос: пришлось использовать отрицательный margin для выравнивания. Можно сделать по-другому?*/
 }
 
 .search-form-title {
@@ -273,7 +269,6 @@ a {
 }
 
 .search-form {
-  display: block;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -374,7 +369,6 @@ a {
 
 .plus-btn::after {
   content: "";
-  display: block;
   position: absolute;
   top: 13px;
   left: 18px;
@@ -585,7 +579,6 @@ input[type="checkbox"] + label::before {
   content: "";
   position: absolute;
   left: 0;
-  display: block;
   width: 27px;
   height: 23px;
   background-image: url("../img/checkbox-off.svg");
@@ -635,7 +628,6 @@ input[type="checkbox"]:checked:disabled + label::before {
 
 .price-range-output::before {
   content: "";
-  display: block;
   position: absolute;
   left: 50%;
   border: 1px solid #ffffff;
@@ -643,14 +635,44 @@ input[type="checkbox"]:checked:disabled + label::before {
   border-bottom-width: 11px;
 }
 
-/*.toggle{*/
-  /**/
-/*}*/
+.scale {
+  position: relative;
+  margin: 20px 0;
+  width: 100%;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
 
-/*.toggle:hover,*/
-/*.toggle:focus {*/
+.bar {
+  width: 78%;
+  height: 2px;
+  background-color: #ffffff;
+}
 
-/*}*/
+.toggle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background-color: #ababab;
+  border: 8px solid #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 2px 0 0 rgba(255, 255, 255, 0.1);
+}
+
+.min-toggle {
+  transform: translateY(-55%);
+}
+
+.max-toggle {
+  left: 78%;
+  transform: translateY(-55%);
+}
+
+.toggle:hover,
+.toggle:focus {
+  transform: translateY(-55%) scale(1.1);
+}
 
 .show-result-btn {
   padding: 8px 33px;
@@ -659,6 +681,7 @@ input[type="checkbox"]:checked:disabled + label::before {
   border: 2px solid #ffffff;
   border-radius: 2px;
   margin-left: 50%;
+  margin-top: 10px;
   transform: translateX(-50%);
   text-transform: uppercase;
   cursor: pointer;
@@ -692,6 +715,7 @@ input[type="checkbox"]:checked:disabled + label::before {
   font-size: 21px;
   font-weight: bold;
   line-height: 26px;
+  white-space: nowrap;  /*Вопрос: Почему переносит span на новую строку? (если без nowrap)*/
   color: #000000;
 }
 
