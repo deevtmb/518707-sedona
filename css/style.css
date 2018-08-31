@@ -1,7 +1,3 @@
-/*body * {*/
-  /*outline: 1px dashed red;*/
-/*}*/
-
 html {
   background-color: #f2f2f2;
 }
@@ -61,7 +57,7 @@ a {
 }
 
 .main-navigation li{
-  width: calc((240 / 1056) * 100%); /*Вопрос: можно ли проще расчитать ширину? Ширина = 20% ширины макета*/
+  width: calc((240 / 1056) * 100%);
   padding: 14px 0 16px;
   text-align: left;
 }
@@ -93,15 +89,10 @@ a {
 }
 
 .intro {
-  /*padding: 76px 0 72px;*/
   margin: 0;
   min-height: 508px;
-  max-height: 512px;
-  background-color: #d8e6f1;
-  background-image: url("../img/mask-intro.svg"), url("../img/bg-photo.jpg"); /*Вопрос: при уменьшении размера макета до 768px внизу появляются края фона, картинка не помещается, можно исправить?*/
-  background-repeat: no-repeat, no-repeat;
-  background-position: 50% 100%, 50% 21%;
-  background-size: 100%, 100%;
+  background: url("../img/mask-intro.svg") no-repeat 50% 100%, url("../img/bg-photo.jpg") no-repeat 50% 21%, #d8e6f1;
+  background-size: 100% auto, cover, cover;
   text-align: center;
 }
 
@@ -141,7 +132,7 @@ a {
 }
 
 .reason {
-  min-height: 256px; /*Вопрос: размер нижнего отступа в блоке меняется в зависимости от размера макета. Я убрал нижний отступ, но добавил min-height, так можно? или можно сделать подругому? если его не ставить фон появляется за изображением*/
+  min-height: 256px;
   width: calc(100% / 3);
   padding: 46px 0 0;
   text-align: center;
@@ -154,15 +145,22 @@ a {
   text-align: center;
 }
 
-.reason-block p {
-  width: 76%;
+.reason-list > li:nth-child(3) {
+  padding: 46px 1% 0;
+}
+
+.reason-list > li:nth-child(4) {
+  padding: 46px 2% 0;
+}
+
+.reason-list > li:nth-child(5) {
+  padding: 46px 3% 0;
 }
 
 .reason h3,
 .town-features-list h4 {
   width: 155px;
   margin: 0 auto 24px;
-
   font-size: 21px;
   font-weight: bold;
   text-align: center;
@@ -176,8 +174,11 @@ a {
   display: flex;
   color: #ffffff;
   background-color: #81b3d2;
-
   text-align: center;
+}
+
+.reason-block h3 {
+  color: #ffffff;
 }
 
 .image-1::after {
@@ -185,11 +186,8 @@ a {
   display: block;
   margin: 0;
   width: calc((100% / 3) * 2);
-  background-image: url("../img/bg-town.jpg");
+  background: url("../img/bg-town.jpg") no-repeat 50% 55%;
   background-size: 100%;
-  background-repeat: no-repeat;
-  background-position: 50% 55%;
-
 }
 
 .image-2::before {
@@ -197,14 +195,8 @@ a {
   display: block;
   margin: 0;
   width: calc((100% / 3) * 2);
-  background-image: url("../img/bg-bridge.jpg");
+  background: url("../img/bg-bridge.jpg") no-repeat 50% 55%;
   background-size: 100%;
-  background-repeat: no-repeat;
-  background-position: 50% 55%;
-}
-
-.reason-block h3 {
-  color: #ffffff;
 }
 
 .town-features-list {
@@ -218,6 +210,10 @@ a {
   list-style: none;
 }
 
+.town-features-list p {
+  width: 72%;
+}
+
 .features-icon::before {
   display: block;
   margin: 0 0 23px;
@@ -225,16 +221,22 @@ a {
 
 .accommodation::before {
   content: url("../img/icon-accommodation.svg");
+  /*width: 75px;*/
+  /*height: 72px;*/
 }
 
 .food::before {
   content: url("../img/icon-food.svg");
   margin-top: 2px;
+  /*width: 74px;*/
+  /*height: 70px;*/
 }
 
 .souvenir::before {
   content: url("../img/icon-souvenir.svg");
   margin-top: -4px;
+  /*width: 64px;*/
+  /*height: 76px;*/
 }
 
 .search-form-title {
@@ -331,13 +333,27 @@ a {
   right: 9px;
   width: 21px;
   height: 22px;
-  background: url("../img/calendar.svg") no-repeat 50% 50%;
+  background: url("../img/calendar-sprite.png") no-repeat 0% 50%;
+}
+
+.calendar:hover,
+.calendar:focus {
+  background: url("../img/calendar-sprite.png") no-repeat 100% 50%;
+}
+
+.calendar:active {
+  background: url("../img/calendar-sprite.png") no-repeat 50% 50%;
 }
 
 .form-count-group div {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.count-block label:last-of-type {
+  margin-right: -15px;
+  margin-left: 15px;
 }
 
 .count-btn,
@@ -435,11 +451,7 @@ a {
   padding: 0;
   width: 100%;
   height: 593px;
-
-  background-color: #ffffff;
-  background-image: url(../img/map.jpg);
-  background-position: 50% 100%;
-  background-repeat: no-repeat;
+  background: #ffffff url(../img/map.jpg) no-repeat 50% 100%;
   background-size: auto;
 }
 
@@ -531,23 +543,21 @@ a {
   width: 115px;
   height: 41px;
   margin-left: 8px;
-  background: url("../img/logo-htmlacademy.svg") no-repeat 50% 50%;
+  background: url("../img/logo-htmlacademy-sprite.png") no-repeat 50% 50%;
 }
 
 .site-developer a:hover,
 .site-developer a:focus {
-  background: url("../img/logo-htmlacademy-focus.svg") no-repeat 50% 50%;
+  background: url("../img/logo-htmlacademy-sprite.png") no-repeat 100% 50%;
 }
 
 .site-developer a:active {
-  background: url("../img/logo-htmlacademy-active.svg") no-repeat 50% 50%;
+  background: url("../img/logo-htmlacademy-sprite.png") no-repeat 0 50%;
 }
-
-/*Стили для Hotels.html*/
 
 .search-filter {
   margin: 0;
-  padding: 26px 6% 22px;
+  padding: 26px 6% 19px;
   background: #81b3d3 url("../img/bg-hotel-page.jpg") no-repeat 50% 50%;
   background-size: 100%;
 }
@@ -564,7 +574,7 @@ a {
 }
 
 .filter-form > fieldset:nth-child(2) {
-  margin-left: 4%;
+  margin-left: 5%;
 }
 
 .filter-form legend {
@@ -577,13 +587,13 @@ a {
   padding: 0;
   margin: 0;
   list-style: none;
-  width: 210px;
+  width: 204px;
 }
 
 .filter-list li {
   position: relative;
   display: flex;
-  padding: 12px 0 12px 40px;
+  padding: 12px 0 13px 40px;
 }
 
 .filter-form input[type="checkbox"] {
@@ -735,7 +745,7 @@ input[type="checkbox"]:checked:disabled + label::before {
   font-size: 21px;
   font-weight: bold;
   line-height: 26px;
-  white-space: nowrap;  /*Вопрос: Почему переносит span на новую строку? (если без nowrap)*/
+  white-space: nowrap;
   color: #000000;
 }
 
@@ -840,6 +850,7 @@ input[type="checkbox"]:checked:disabled + label::before {
   font-size: 21px;
   font-weight: bold;
   line-height: 26px;
+  cursor: pointer;
 }
 
 .hotels-list-item h3:hover,
@@ -918,13 +929,13 @@ input[type="checkbox"]:checked:disabled + label::before {
 }
 
 .four-star-hotel::before {
-  width: 88px;
+  width: 89px;
 }
 
 .three-star-hotel::before {
-  width: 64px;
+  width: 65px;
 }
 
 .two-star-hotel::before {
-  width: 40px;
+  width: 41px;
 }
