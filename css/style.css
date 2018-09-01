@@ -254,7 +254,7 @@ a {
 
 .features-icon::before {
   display: block;
-  margin: 0 auto 23px;
+  margin: 0 auto 27px;
 }
 
 .accommodation::before {
@@ -549,9 +549,13 @@ a {
   display: flex;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
-  justify-content: space-between;
-  width: 150px;
+  justify-content: center;
+  width: calc(100% / 3);
   list-style: none;
+}
+
+.social-references li:not(:last-child) {
+  margin-right: 6px;
 }
 
 .social-btn {
@@ -565,6 +569,10 @@ a {
   -ms-flex-align: center;
   align-items: center;
   background-color: #81b3d2;
+}
+
+.social-btn li:last-child {
+  margin-right: 0;
 }
 
 .social-btn::before {
