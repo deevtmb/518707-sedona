@@ -324,10 +324,10 @@ a {
 .search-form {
   position: absolute;
   z-index: 1;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
+  right: 50%;
+  -webkit-transform: translateX(50%);
+  -ms-transform: translateX(50%);
+  transform: translateX(50%);
   width: 568px;
   padding: 55px;
   -webkit-box-sizing: border-box;
