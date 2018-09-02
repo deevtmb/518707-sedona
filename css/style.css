@@ -323,6 +323,7 @@ a {
 
 .search-form {
   position: absolute;
+  z-index: 1;
   left: 50%;
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
@@ -498,6 +499,7 @@ a {
 }
 
 .map {
+  position: relative;
   margin: 0;
   padding: 0;
   width: 100%;
@@ -505,6 +507,15 @@ a {
   background: #ffffff;
   text-align: center;
   overflow: hidden;
+}
+
+.map img {
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  -webkit-transform: translateX(50%);
+  -ms-transform: translateX(50%);
+  transform: translateX(50%);
 }
 
 .site-footer {
@@ -526,6 +537,7 @@ a {
 
 .index-page-footer {
   position: absolute;
+  z-index: 1;
   bottom: 0;
 }
 
@@ -607,8 +619,8 @@ a {
 }
 
 .site-developer {
-  display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
+  display: -webkit-inline-flex;
   display: inline-flex;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
