@@ -10,7 +10,7 @@
   <body>
     <header class="header-navigation">
       <a class="header-logo">
-        <img src="img/logo-sedona.svg" width="140" height="72" alt="Добро пожаловать в Седону!">
+        <img src="img/logo-sedona.svg" width="140" height="72" alt="Седона">
       </a>
       <nav class="site-navigation" aria-label="Навигация сайта">
         <ul class="main-navigation">
@@ -46,15 +46,15 @@
             <ul class="town-features-list">
               <li class="reason features-icon accommodation">
                 <h4>Жильё</h4>
-                <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+                <p>Рекомендуем пожить в&nbsp;настоящем мотеле, всё&nbsp;как в кино!</p>
               </li>
               <li class="reason features-icon food">
                 <h4>Еда</h4>
-                <p>Всегда заказывайте фирменный бургер, Вы не разочаруетесь</p>
+                <p>Всегда заказывайте фирменный бургер, Вы&nbsp;не&nbsp;разочаруетесь</p>
               </li>
               <li class="reason features-icon souvenir">
                 <h4>Сувениры</h4>
-                <p>Не только Китайского, но и местного производства!</p>
+                <p>Не только Китайского, но&nbsp;и местного производства!</p>
               </li>
             </ul>
           </li>
@@ -62,7 +62,7 @@
             <div class="reason">
               <h3>Там есть<br> мост дьявола</h3>
               <p>&#8212; №2 &#8212;</p>
-              <p>Да, по нему можно пройти! Если конечно Вы осмелитесь</p>
+              <p>Да, по нему можно пройти!&nbsp;Если конечно Вы&nbsp;осмелитесь</p>
             </div>
           </li>
           <li class="reason">
@@ -73,7 +73,7 @@
           <li class="reason">
             <h3>Красивая дорога</h3>
             <p>&#8212; №4 &#8212;</p>
-            <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+            <p>Ехать в Седону из&nbsp;Лас&#8209;Вегаса совсем не&nbsp;скучно!</p>
           </li>
           <li class="reason">
             <h3>Мало туристов</h3>
@@ -89,45 +89,44 @@
         <p>Укажите предполагаемые даты поездки,<br>
           и мы покажем Вам лучшие предложения гостиниц в Седоне</p>
         <a class="search-form-btn" href="hotels-search.html">Поиск гостиницы в Седоне</a>
-        <div class="search-window">
-          <form class="search-form" method="post" action="https://echo.htmlacademy.ru">
-            <fieldset class="form-date-group">
-              <legend class="visually-hidden">Даты поездки</legend>
+        <form class="search-form" method="post" action="https://echo.htmlacademy.ru">
+          <fieldset class="form-date-group">
+            <legend class="visually-hidden">Даты поездки</legend>
+            <div>
+              <label for="check-in-date">Дата заезда:</label>
+              <input type="text" name="check-in-date" id="check-in-date" value="24 апреля 2017">
+              <a class="calendar" href="#" aria-label="Выберите дату в Календаре"></a>
+            </div>
+            <div>
+              <label for="check-out-date">Дата выезда:</label>
+              <input type="text" name="check-out-date" id="check-out-date" value="4 июля 2017">
+              <a class="calendar" href="#" aria-label="Выберите дату в Календаре"></a>
+            </div>
+          </fieldset>
+          <fieldset class="form-count-group">
+            <legend class="visually-hidden">Гости</legend>
+            <div class="count-block">
+              <label for="adults">Взрослые:</label>
               <div>
-                <label for="check-in-date">Дата заезда:</label>
-                <input type="text" name="check-in-date" id="check-in-date" value="24 апреля 2017">
-                <a class="calendar" href="#" aria-label="Выберите дату в Календаре"></a>
+                <a class="count-btn minus-btn" href="#" aria-label="Убрать одного взрослого"></a>
+                <input type="text" name="adults" id="adults" value="2" min="1" step="1" pattern="[0-9]{1,2}">
+                <a class="count-btn plus-btn" href="#" aria-label="Добавить одного взрослого"></a>
               </div>
+              <label for="children">Дети:</label>
               <div>
-                <label for="check-out-date">Дата выезда:</label>
-                <input type="text" name="check-out-date" id="check-out-date" value="4 июля 2017">
-                <a class="calendar" href="#" aria-label="Выберите дату в Календаре"></a>
+                <a class="count-btn minus-btn" href="#" aria-label="Убрать одного ребенка"></a>
+                <input type="text" name="children" id="children" value="0" step="1" pattern="[0-9]{1,2}">
+                <a class="count-btn plus-btn" href="#" aria-label="Добавить одного ребенка"></a>
               </div>
-            </fieldset>
-            <fieldset class="form-count-group">
-              <legend class="visually-hidden">Гости</legend>
-              <div class="count-block">
-                <label for="adults">Взрослые:</label>
-                <div>
-                  <button class="count-btn minus-btn" type="button" aria-label="Убрать одного взрослого"></button>
-                  <output name="adults" id="adults">2</output>
-                  <button class="count-btn plus-btn" type="button" aria-label="Добавить одного взрослого"></button>
-                </div>
-                <label for="children">Дети:</label>
-                <div>
-                  <button class="count-btn minus-btn" type="button" aria-label="Убрать одного ребенка"></button>
-                  <output name="children" id="children">0</output>
-                  <button class="count-btn plus-btn" type="button" aria-label="Добавить одного ребенка"></button>
-                </div>
-              </div>
-            </fieldset>
-            <button class="search-btn" type="submit">Найти</button>
-          </form>
-        </div>
+            </div>
+          </fieldset>
+          <button class="search-btn" type="submit">Найти</button>
+        </form>
       </section>
 
       <section class="map">
         <h2 class="visually-hidden">Седона на карте</h2>
+        <img src="img/map.jpg" width="1200" height="593" alt="Sedona, AZ 86336, USA">
       </section>
     </main>
 
