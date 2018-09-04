@@ -5,7 +5,7 @@
     <title>HTML Academy: Седона</title>
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body>
     <header class="header-navigation">
@@ -84,11 +84,13 @@
       </section>
 
       <section class="search-form-title">
-        <h2 class="visually-hidden">Поиск гостиницы</h2>
-        <p><b>Заинтересовались?</b></p>
-        <p>Укажите предполагаемые даты поездки,<br>
-          и мы покажем Вам лучшие предложения гостиниц в Седоне</p>
-        <a class="search-form-btn" href="hotels-search.html">Поиск гостиницы в Седоне</a>
+        <div>
+          <h2 class="visually-hidden">Поиск гостиницы</h2>
+          <p><b>Заинтересовались?</b></p>
+          <p>Укажите предполагаемые даты поездки,<br>
+            и мы покажем Вам лучшие предложения гостиниц в Седоне</p>
+          <a class="search-form-btn" href="hotels-search.html">Поиск гостиницы в Седоне</a>
+        </div>
         <form class="search-form" method="post" action="https://echo.htmlacademy.ru">
           <fieldset class="form-date-group">
             <legend class="visually-hidden">Даты поездки</legend>
@@ -149,14 +151,6 @@
         <a href="https://htmlacademy.ru/intensive/htmlcss" aria-label="Сайт Разработчика" target="_blank"><span class="visually-hidden">HTML Academy</span></a>
       </p>
     </footer>
-  <script>
-    var openForm = document.querySelector(".search-form-btn");
-    var searchForm = document.querySelector(".search-form");
-
-    openForm.addEventListener("click", function (evt) {
-      evt.preventDefault();
-      searchForm.classList.toggle("search-form-transition");
-    });
-  </script>
+  <script src="js/script.min.js"></script>
   </body>
 </html>
