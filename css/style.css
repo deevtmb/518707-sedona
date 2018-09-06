@@ -445,6 +445,15 @@ a {
   text-align: center;
 }
 
+.form-count-group input::-webkit-outer-spin-button,
+.form-count-group input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.form-count-group input {
+  -moz-appearance: textfield;
+}
+
 .count-btn {
   position: absolute;
   width: 38px;
