@@ -1003,7 +1003,7 @@ input[type="checkbox"]:checked:disabled+label::before {
 }
 
 .hotels-list-item {
-  padding: 30px 6%;
+  padding: 30px 6% 24px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1038,7 +1038,7 @@ input[type="checkbox"]:checked:disabled+label::before {
 }
 
 .hotels-list-item h3 {
-  margin: -5px 0 5px;
+  margin: -5px 0 0;
   width: 100%;
   font-size: 21px;
   font-weight: bold;
@@ -1114,7 +1114,7 @@ input[type="checkbox"]:checked:disabled+label::before {
 }
 
 .hotel-rating p {
-  margin: 0;
+  margin-bottom: 6px;
   padding: 3px 0;
   width: 110px;
   background-color: #f2f2f2;
